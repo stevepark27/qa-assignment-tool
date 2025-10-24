@@ -121,4 +121,3 @@ Integrate notifications for QA managers upon completion
 Steve Solnosky
 📍 Based in France | US Citizen
 💼 LinkedIn Profile https://www.linkedin.com/in/steve-solnosky-data27/
-💻 GitHub Profile
