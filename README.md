@@ -8,7 +8,7 @@ It replaces a time-consuming manual process with an intelligent, repeatable syst
 ## 🧩 Project Overview
 
 The **QA Assignment Tool** was developed to support a QA manager who manually assigned over 200 representatives each month to team leads for quality evaluations — a process that took about two hours every month.  
-This tool automates the process, ensuring assignments are fair, qualification-based, and rotated to prevent repetitive pairings.
+This tool automates the process, ensuring assignments are fair, qualification-based, and rotated over time to prevent repetitive pairings while balancing workloads.
 
 ---
 
@@ -17,37 +17,41 @@ This tool automates the process, ensuring assignments are fair, qualification-ba
 - Over 200 representatives required monthly QA evaluations.  
 - Each team lead specialized in specific call types.  
 - The **QA manager** manually matched reps to team leads in Excel.  
-- The process was time-consuming and difficult to balance evenly.  
+- Some leads had many more qualifications than others, making workload balancing difficult.  
 - The manager wanted a faster, fairer, and more automated solution that also promoted rotation.
 
 ---
 
 ## 💡 Solution
 
-The tool automates and randomizes the assignment process using Python:
+The tool automates and balances the assignment process using Python:
 - Reads representative and team lead data directly from **Excel workbooks (.xlsx)**.  
 - Groups reps by call type and distributes them evenly among qualified leads.  
+- Uses a **maximum hours variable** to prevent overloading highly qualified leads while maintaining balanced distribution.  
 - Includes a **shuffling system** that increases the likelihood of reps being assigned to different leads each month.  
 - Writes the final results to a new Excel sheet, ready for review or sharing.  
 
-This automation reduced a two-hour manual task to **less than one minute** while improving consistency and fairness.
+This automation reduced a two-hour manual task to **less than one minute** while improving fairness, transparency, and workload balance.
 
 ---
 
 ## ⚙️ How It Works
 
 1. **Input file**:  
-   - `qa_assignments.xlsx` – contains multiple sheets:
-     - `Reps` – list of representatives and their qualified call types  
-     - `Leads` – list of team leads and their specializations  
+   - `QA_Assignments.xlsx` – contains multiple sheets:
+     - `Reps` – list of representatives, their qualified call types, and their required hours of evaluation 
+     - `Leads` – list of team leads, their specializations, and the maximum hours to be assigned 
 
 2. **Script execution**:
    ```bash
-   python qa_assignment_tool.py
+   python QA_assignment_project.py
 
 3. Output:
 
-A new sheet (e.g., Assignments) added to the same workbook, showing the final mapping of reps to team leads, evenly distributed and randomized.
+Three new sheets (Assignments, Unassigned Reps, and Lead Hour Balance) showing the final mapping of reps to team leads, any unassigned reps, and remaining Lead hours.
+
+
+
 
 
 ---
@@ -57,6 +61,8 @@ A new sheet (e.g., Assignments) added to the same workbook, showing the final ma
 Automated assignment generation
 
 Qualification-based matching
+
+Max hours variable for balanced workloads
 
 Shuffling system for monthly rotation
 
@@ -76,6 +82,8 @@ Reduced manual workload from 2 hours to under 1 minute
 
 Improved fairness and consistency of assignments
 
+Balanced workloads even when leads have different qualification levels
+
 Promoted monthly variation to avoid repetition
 
 Increased efficiency and transparency for the QA manager
@@ -93,6 +101,7 @@ Excel (.xlsx) integration for input/output
 Optional: Streamlit UI (for future dashboard)
 
 
+
 ---
 
 🚀 Future Enhancements
@@ -104,11 +113,12 @@ Include historical tracking to prevent repeating prior assignments
 Integrate notifications for QA managers upon completion
 
 
+
 ---
 
 👤 Author
 
-Steve Soll
+Steve Solnosky
 📍 Based in France | US Citizen
 💼 LinkedIn Profile https://www.linkedin.com/in/steve-solnosky-data27/
 💻 GitHub Profile
