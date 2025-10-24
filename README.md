@@ -8,7 +8,7 @@ It replaces a time-consuming manual process with an intelligent, repeatable syst
 ## 🧩 Project Overview
 
 The **QA Assignment Tool** was developed to support a QA manager who manually assigned over 200 representatives each month to team leads for quality evaluations — a process that took about two hours every month.  
-This tool automates the process, ensuring assignments are fair, qualification-based, and rotated over time to prevent repetitive pairings.
+This tool automates the process, ensuring assignments are fair, qualification-based, and rotated to prevent repetitive pairings.
 
 ---
 
