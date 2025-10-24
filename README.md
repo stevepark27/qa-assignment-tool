@@ -31,7 +31,7 @@ The tool automates and balances the assignment process using Python:
 - Includes a **shuffling system** that increases the likelihood of reps being assigned to different leads each month.  
 - Writes the final results to a new Excel sheet, ready for review or sharing.  
 
-This automation reduced a two-hour manual task to **less than one minute** while improving fairness, transparency, and workload balance.
+This automation reduced a two-hour manual task to **less than 10 minutes** while improving fairness, transparency, and workload balance.
 
 ---
 
